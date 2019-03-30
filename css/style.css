@@ -117,7 +117,13 @@ body {
     height: 33px;
     width: 33px;
     line-height: 33px;
-    cursor: pointer
+    cursor: pointer;
+    transition: all .7s ease-in-out
+}
+
+.header .arrow i:hover {
+    background-color: #f7600e;
+    color: #FFF
 }
 
 /* End Header */
