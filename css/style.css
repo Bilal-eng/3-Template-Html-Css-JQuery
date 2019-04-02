@@ -251,7 +251,8 @@ body {
     border-radius: 10px;
     margin-top: 40px;
     color: #6c7279;
-    transition: all .5s ease-in-out
+    transition: all .5s ease-in-out;
+    outline: none
 }
 
 .our-work .show-more:hover {
