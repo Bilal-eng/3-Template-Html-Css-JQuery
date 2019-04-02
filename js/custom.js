@@ -19,4 +19,61 @@ $(function () {
             scrollTop: $('.features').offset().top
         }, 1000);
     });
+
+    // Show Hidden Items From Work
+
+    $('.show-more').click(function(){
+
+        $('.our-work .hidden').fadeIn(1000);
+
+    });
+
+    // Check Testimonilas
+
+    var leftArrow = $('.testim .fa-chevron-left'),
+
+        rightArrow = $('.testim .fa-chevron-right');
+
+    function checkClients() {
+        
+        $('.client:first').hasClass('active') ? leftArrow.fadeOut() : leftArrow.fadeIn();
+
+        $('.client:last').hasClass('active') ? rightArrow.fadeOut() : rightArrow.fadeIn();
+
+    }
+
+    checkClients();
+
+    $('.testim i').click(function(){
+
+        if($(this).hasClass('fa-chevron-right')) {
+
+            $('.testim .active').fadeOut(200, function(){
+
+                $(this).removeClass('active').next('.client')
+                .addClass('active').fadeIn();
+
+                checkClients();
+
+            });
+        
+        } else {
+
+            $('.testim .active').fadeOut(200, function(){
+
+                $(this).removeClass('active').prev('.client')
+                .addClass('active').fadeIn();
+
+                checkClients();
+
+            });
+        }
+
+    });
+
+
+
+
+
+
 });
