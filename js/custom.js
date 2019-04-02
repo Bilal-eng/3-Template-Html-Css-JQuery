@@ -4,7 +4,13 @@ $(function () {
 
     // Trigger Nice Scroll Plugin
 
-    $('html').niceScroll();
+    $('html').niceScroll({
+
+        cursorcolor: '#f7600e',
+        cusrowidth: 10,
+        cursorborderradius: 0,
+        cursorborder: '1px solid #f7600e'
+    });
 
     // Change Header Height
 
@@ -18,6 +24,15 @@ $(function () {
 
             scrollTop: $('.features').offset().top
         }, 1000);
+    });
+
+    $('.hire').click(function(){
+
+        $('html, body').animate({
+
+            scrollTop: $('.our-team').offset().top
+        }, 1000);
+
     });
 
     // Show Hidden Items From Work
